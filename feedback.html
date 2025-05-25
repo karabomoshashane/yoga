@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback - Yoga Outdoor Studio</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="images/logo.png" alt="Yoga Studio Logo" class="logo">
+            <nav>
+                <button class="menu-toggle">☰</button>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="classes-and-schedule.html">Classes & Schedule</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="book-a-class.html">Book a Class</a></li>
+                    <li><a href="about-us.html">About Us</a></li>
+                    <li><a href="feedback.html" class="active">Feedback</a></li>
+                    <li><a href="contact-us.html">Contact</a></li>
+                 <li><a href="pricing-and-membership.html">Membership</a></li>
+
+                </ul>
+            </nav>
+            <button class="dark-mode-toggle">🌓</button>
+        </div>
+    </header>
+
+    <section class="banner">
+        <div class="container-bacg">
+            <h2>Your Voice Shapes Our Studio</h2>
+            <p>We value your thoughts! Share your feedback to help us enhance your outdoor yoga experience in Gaborone.</p>
+        </div>
+    </section>
+
+    <section class="content feedback-page">
+        <div class="container container__main-sidebar">
+            <div class="container__main">
+                <h3>Share Your Experience with Us</h3>
+                <form id="feedback-form">
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+                    <label for="email">Your Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+
+                    <label for="rating">Overall Experience Rating:</label>
+                    <div class="star-rating" id="rating">
+                        <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="5 stars"></label>
+                        <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="4 stars"></label>
+                        <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="3 stars"></label>
+                        <input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="2 stars"></label>
+                        <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="1 star"></label>
+                    </div>
+
+                    <label for="class-type-feedback">Specific Class (Optional):</label>
+                    <select id="class-type-feedback" name="class-type-feedback">
+                        <option value="">-- Select a class (optional) --</option>
+                        <option value="Sunrise Yoga">Sunrise Yoga</option>
+                        <option value="Midday Flow">Midday Flow</option>
+                        <option value="Sunset Yoga">Sunset Yoga</option>
+                        <option value="Weekend Bliss">Weekend Bliss</option>
+                        <option value="Restorative Yin">Restorative Yin</option>
+                        <option value="Power Vinyasa">Power Vinyasa</option>
+                        <option value="General Feedback">General Feedback</option>
+                    </select>
+
+                    <label for="instructor-feedback">Instructor (Optional):</label>
+                    <input type="text" id="instructor-feedback" name="instructor-feedback" placeholder="e.g., Sarah, Thabo, Lebo">
+
+                    <label for="message">Your Feedback Message:</label>
+                    <textarea id="message" name="message" rows="7" placeholder="Share your detailed feedback here..." required></textarea>
+
+                    <div class="privacy-consent">
+                        <input type="checkbox" id="consent" name="consent" required>
+                        <label for="consent">I agree to the <a href="#privacy-policy">Privacy Policy</a> and for my feedback to be used as a testimonial (anonymously or with first name).</label>
+                    </div>
+
+                    <button type="submit" class="cta-button">Send Your Feedback</button>
+                    <div id="form-messages" class="form-messages"></div>
+                </form>
+            </div>
+            <div class="container__sidebar">
+                <div class="testimonial">
+                    <h3>What Our Community Says</h3>
+                    <p>"The sunset yoga class is my weekly reset. The instructors are amazing, and the Gaborone setting is perfect."</p>
+                    <p class="author">- Mpho T., Gaborone</p>
+                </div>
+                <div class="testimonial">
+                    <p>"I love the community vibe here. It’s more than yoga—it’s a lifestyle!"</p>
+                    <p class="author">- Sarah L., Gaborone</p>
+                </div>
+                <div class="testimonial">
+                    <p>"Yoga Outdoor Studio provides such a unique and calming experience. Highly recommend for all levels!"</p>
+                    <p class="author">- Gofaone M., Gaborone</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 Yoga Outdoor Studio, Gaborone, Botswana</p>
+            <p>Contact: <a href="mailto:info@yogaoutdoorstudio.com">info@yogaoutdoorstudio.com</a> | +267 123 4567</p>
+            <p>Address: 123 Serenity Lane, Gaborone, Botswana</p>
+            <div class="social-icons">
+                <a href="https://instagram.com/yogaoutdoorstudio" target="_blank"><img src="images/instagram.png" alt="Instagram"></a>
+                <a href="https://facebook.com/yogaoutdoorstudio" target="_blank"><img src="images/facebook.png" alt="Facebook"></a>
+                <a href="https://twitter.com/yogaoutdoorstudio" target="_blank"><img src="images/twitter.png" alt="Twitter"></a>
+            </div>
+            <p><a href="contact-us.html">Contact Us</a> | <a href="pricing-and-membership.html">Pricing</a> | <a href="#privacy">Privacy Policy</a></p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        document.getElementById('feedback-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            const formMessages = document.getElementById('form-messages');
+            formMessages.innerHTML = ''; // Clear previous messages
+            formMessages.classList.remove('success', 'error'); // Clear previous styles
+
+            // Basic validation
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            const consent = document.getElementById('consent').checked;
+            const rating = document.querySelector('input[name="rating"]:checked');
+
+            if (!name || !email || !message || !consent || !rating) {
+                formMessages.classList.add('error');
+                formMessages.textContent = 'Please fill in all required fields, provide a rating, and agree to the privacy policy.';
+                return;
+            }
+
+            // Simulate form submission
+            setTimeout(() => {
+                formMessages.classList.add('success');
+                formMessages.textContent = 'Thank you for your valuable feedback! We appreciate it.';
+                document.getElementById('feedback-form').reset(); // Clear form fields
+                document.querySelectorAll('.star-rating input').forEach(input => input.checked = false); // Clear stars
+            }, 1000);
+        });
+    </script>
+</body>
+</html>

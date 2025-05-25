@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classes & Schedule - Yoga Outdoor Studio</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="images/logo.png" alt="Yoga Studio Logo" class="logo">
+            <nav>
+                <button class="menu-toggle">☰</button>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="classes-and-schedule.html" class="active">Classes & Schedule</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="book-a-class.html">Book a Class</a></li>
+                    <li><a href="about-us.html">About Us</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                    <li><a href="contact-us.html">Contact</a></li>
+                                        <li><a href="pricing-and-membership.html">Membership</a></li>
+
+                </ul>
+            </nav>
+            <button class="dark-mode-toggle">🌓</button>
+        </div>
+    </header>
+
+    <section class="banner">
+        <div class="container-bacg">
+            <h2>Discover Your Perfect Flow</h2>
+            <p>Explore our diverse range of yoga classes and secure your spot in Gaborone.</p>
+            <a href="#classes" class="cta-button">View Schedule</a>
+        </div>
+    </section>
+
+    <section class="content class-schedule" id="classes">
+        <div class="container container__main-sidebar">
+            <div class="container__main">
+                <h3>Our Weekly Class Schedule</h3>
+                <div class="table-responsive">
+                    <table class="schedule-table">
+                        <thead>
+                            <tr>
+                                <th>Class Name</th>
+                                <th>Time</th>
+                                <th>Days</th>
+                                <th>Instructor</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Sunrise Yoga</td>
+                                <td>6:00 AM - 7:00 AM</td>
+                                <td>Monday & Wednesday</td>
+                                <td>Sarah Kgosi</td>
+                                <td><a href="book-a-class.html?class=Sunrise%20Yoga" class="book-class-button">Book Now</a></td>
+                            </tr>
+                            <tr>
+                                <td>Midday Flow</td>
+                                <td>12:30 PM - 1:30 PM</td>
+                                <td>Tuesday & Thursday</td>
+                                <td>Thabo Mokoena</td>
+                                <td><a href="book-a-class.html?class=Midday%20Flow" class="book-class-button">Book Now</a></td>
+                            </tr>
+                            <tr>
+                                <td>Sunset Yoga</td>
+                                <td>6:00 PM - 7:00 PM</td>
+                                <td>Monday, Wednesday & Friday</td>
+                                <td>Sarah Kgosi</td>
+                                <td><a href="book-a-class.html?class=Sunset%20Yoga" class="book-class-button">Book Now</a></td>
+                            </tr>
+                            <tr>
+                                <td>Weekend Bliss (All Levels)</td>
+                                <td>8:00 AM - 9:30 AM</td>
+                                <td>Saturday</td>
+                                <td>Lebo Dikobe</td>
+                                <td><a href="book-a-class.html?class=Weekend%20Bliss" class="book-class-button">Book Now</a></td>
+                            </tr>
+                            <tr>
+                                <td>Restorative Yin</td>
+                                <td>7:00 PM - 8:00 PM</td>
+                                <td>Tuesday</td>
+                                <td>Thabo Mokoena</td>
+                                <td><a href="book-a-class.html?class=Restorative%20Yin" class="book-class-button">Book Now</a></td>
+                            </tr>
+                            <tr>
+                                <td>Power Vinyasa</td>
+                                <td>6:00 PM - 7:00 PM</td>
+                                <td>Thursday</td>
+                                <td>Lebo Dikobe</td>
+                                <td><a href="book-a-class.html?class=Power%20Vinyasa" class="book-class-button">Book Now</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>Meet Our Instructors</h3>
+                <div class="instructor-grid">
+                    <div class="instructor">
+                        <img src="images/instructor1.jpg" alt="Instructor Sarah">
+                        <h4>Sarah Kgosi</h4>
+                        <p class="specialty">Vinyasa & Mindfulness</p>
+                        <p>Sarah's classes focus on breath-synchronized movement and cultivating inner peace. She has over 10 years of experience.</p>
+                    </div>
+                    <div class="instructor">
+                        <img src="images/instructor2.jpg" alt="Instructor Thabo">
+                        <h4>Thabo Mokoena</h4>
+                        <p class="specialty">Hatha & Restorative</p>
+                        <p>Thabo brings a gentle yet profound approach to yoga, emphasizing alignment and deep relaxation. His classes are perfect for unwinding.</p>
+                    </div>
+                    <div class="instructor">
+                        <img src="images/instructor3.jpg" alt="Instructor Lebo">
+                        <h4>Lebo Dikobe</h4>
+                        <p class="specialty">Power & Ashtanga</p>
+                        <p>Lebo's dynamic classes challenge students to build strength and push their limits in a supportive environment. Get ready to sweat!</p>
+                    </div>
+                </div>
+
+                <h3>Can't Find a Suitable Time?</h3>
+                <p>Enter your email below, and we'll notify you about new classes and special workshops tailored to your preferences!</p>
+                <form id="schedule-request-form">
+                    <label for="schedule-email">Email Address:</label>
+                    <input type="email" id="schedule-email" name="email" placeholder="your_email@example.com" required>
+                    <button type="submit" class="cta-button">Email My Schedule</button>
+                </form>
+            </div>
+            <div class="container__sidebar">
+                <div class="faq">
+                    <h3>Class & Booking FAQs</h3>
+                    <div class="faq-item">
+                        <h4>Do I need prior yoga experience?</h4>
+                        <p>Not at all! Many of our classes are designed for all levels, and instructors provide modifications for beginners.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>What should I bring to class?</h4>
+                        <p>A yoga mat, water bottle, and comfortable athletic wear. We have mats available for rent if you don't have one.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>How do I book a class?</h4>
+                        <p>You can book a class directly from this page by clicking the "Book Now" button next to your desired class, or visit our <a href="book-a-class.html">Book a Class page</a>.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>Can I cancel or reschedule a class?</h4>
+                        <p>Yes, please notify us at least 24 hours in advance if you need to cancel or reschedule your booking to avoid charges.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 Yoga Outdoor Studio, Gaborone, Botswana</p>
+            <p>Contact: <a href="mailto:info@yogaoutdoorstudio.com">info@yogaoutdoorstudio.com</a> | +267 123 4567</p>
+            <p>Address: 123 Serenity Lane, Gaborone, Botswana</p>
+            <div class="social-icons">
+                <a href="https://instagram.com/yogaoutdoorstudio" target="_blank"><img src="images/instagram.png" alt="Instagram"></a>
+                <a href="https://facebook.com/yogaoutdoorstudio" target="_blank"><img src="images/facebook.png" alt="Facebook"></a>
+                <a href="https://twitter.com/yogaoutdoorstudio" target="_blank"><img src="images/twitter.png" alt="Twitter"></a>
+            </div>
+            <p><a href="contact-us.html">Contact Us</a> | <a href="pricing-and-membership.html">Pricing</a> | <a href="#privacy">Privacy Policy</a></p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        // Placeholder for form submission logic
+        document.getElementById('schedule-request-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Thank you! We will email you updates about our class schedule soon.');
+            this.reset(); // Clear the form
+        });
+    </script>
+</body>
+</html>

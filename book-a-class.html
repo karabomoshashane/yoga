@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Class - Yoga Outdoor Studio</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="images/logo.png" alt="Yoga Studio Logo" class="logo">
+            <nav>
+                <button class="menu-toggle">☰</button>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="classes-and-schedule.html">Classes & Schedule</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="book-a-class.html" class="active">Book a Class</a></li>
+                    <li><a href="about-us.html">About Us</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                    <li><a href="contact-us.html">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="dark-mode-toggle">🌓</button>
+        </div>
+    </header>
+
+    <section class="banner">
+        <div class="container-bacg">
+            <h2>Reserve Your Outdoor Yoga Spot</h2>
+            <p>Join our serene yoga sessions in Gaborone. Find your perfect class and plan today!</p>
+        </div>
+    </section>
+
+    <section class="content book-a-class">
+        <div class="container container__main-sidebar">
+            <div class="container__main">
+                <h3>Our Flexible Membership Plans</h3>
+                <div class="pricing-options">
+                    <div class="pricing-card">
+                        <h4>Drop-In Session</h4>
+                        <p>Perfect for occasional visits to experience our unique outdoor setting.</p>
+                        <p class="price">BWP 150/session</p>
+                    </div>
+                    <div class="pricing-card">
+                        <h4>Monthly Membership</h4>
+                        <p>Enjoy unlimited classes for a full month, fostering consistent practice.</p>
+                        <p class="price">BWP 500/month</p>
+                    </div>
+                    <div class="pricing-card">
+                        <h4>Quarterly Membership</h4>
+                        <p>Commit to your well-being with unlimited classes for three months.</p>
+                        <p class="price">BWP 1400/3 months</p>
+                    </div>
+                    <div class="pricing-card">
+                        <h4>Annual Membership</h4>
+                        <p>Access all our rejuvenating classes throughout the entire year for ultimate value.</p>
+                        <p class="price">BWP 5000/year</p>
+                    </div>
+                </div>
+                <div class="call-to-action">
+                    <p>Looking for more details on our packages?</p>
+                    <a href="pricing-and-membership.html" class="cta-button">View All Pricing Details</a>
+                </div>
+
+                <h3>Secure Your Spot Now!</h3>
+                <form id="booking-form">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+
+                    <label for="class-type">Select Class Type:</label>
+                    <select id="class-type" name="class-type" required>
+                        <option value="">-- Choose a class --</option>
+                        <option value="Sunrise Yoga">Sunrise Yoga</option>
+                        <option value="Midday Flow">Midday Flow</option>
+                        <option value="Sunset Yoga">Sunset Yoga</option>
+                        <option value="Weekend Bliss">Weekend Bliss</option>
+                    </select>
+
+                    <label for="booking-date">Preferred Date:</label>
+                    <input type="date" id="booking-date" name="booking-date" required>
+
+                    <label for="booking-time">Preferred Time:</label>
+                    <input type="time" id="booking-time" name="booking-time" required>
+
+                    <label for="attendees">Number of Attendees:</label>
+                    <input type="number" id="attendees" name="attendees" min="1" value="1" required>
+
+                    <label for="membership-plan">Choose Membership Plan (optional):</label>
+                    <select id="membership-plan" name="membership-plan">
+                        <option value="">-- Select a plan (if applicable) --</option>
+                        <option value="Drop-In Session">Drop-In Session</option>
+                        <option value="Monthly Membership">Monthly Membership</option>
+                        <option value="Quarterly Membership">Quarterly Membership</option>
+                        <option value="Annual Membership">Annual Membership</option>
+                    </select>
+
+                    <button type="submit" class="cta-button">Complete Booking</button>
+                    <div id="form-messages" class="form-messages"></div>
+                </form>
+            </div>
+            <div class="container__sidebar">
+                <div class="faq">
+                    <h3>Frequently Asked Questions</h3>
+                    <div class="faq-item">
+                        <h4>How do I pay for my classes?</h4>
+                        <p>We accept mobile payments (e.g., Orange Money, MyZaka), bank cards, and cash directly at our Gaborone studio for your convenience.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>Can I change my class booking?</h4>
+                        <p>Yes, you can! Please contact us at least 24 hours before your scheduled session if you need to switch class types or reschedule, subject to availability.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>What should I bring to class?</h4>
+                        <p>We recommend bringing your own yoga mat, a water bottle, and comfortable clothing. Don't worry if you don't have a mat; we provide mats for rent if needed.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>Are classes suitable for beginners?</h4>
+                        <p>Absolutely! Our classes are designed to be inclusive, with modifications offered for all levels. Beginners are always welcome and encouraged!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 Yoga Outdoor Studio, Gaborone, Botswana</p>
+            <p>Contact: <a href="mailto:info@yogaoutdoorstudio.com">info@yogaoutdoorstudio.com</a> | +267 123 4567</p>
+            <p>Address: 123 Serenity Lane, Gaborone, Botswana</p>
+            <div class="social-icons">
+                <a href="https://instagram.com/yogaoutdoorstudio" target="_blank"><img src="images/instagram.png" alt="Instagram"></a>
+                <a href="https://facebook.com/yogaoutdoorstudio" target="_blank"><img src="images/facebook.png" alt="Facebook"></a>
+                <a href="https://twitter.com/yogaoutdoorstudio" target="_blank"><img src="images/twitter.png" alt="Twitter"></a>
+            </div>
+            <p><a href="contact-us.html">Contact Us</a> | <a href="pricing-and-membership.html">Pricing</a> | <a href="#privacy">Privacy Policy</a></p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        document.getElementById('booking-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            const formMessages = document.getElementById('form-messages');
+            formMessages.innerHTML = ''; // Clear previous messages
+            formMessages.classList.remove('success', 'error'); // Clear previous styles
+
+            // Basic validation (can be expanded)
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const classType = document.getElementById('class-type').value;
+            const bookingDate = document.getElementById('booking-date').value;
+            const bookingTime = document.getElementById('booking-time').value;
+            const attendees = parseInt(document.getElementById('attendees').value);
+
+            if (!name || !email || !classType || !bookingDate || !bookingTime || attendees < 1) {
+                formMessages.classList.add('error');
+                formMessages.textContent = 'Please fill in all required fields and ensure the number of attendees is at least 1.';
+                return;
+            }
+
+            // Simulate form submission
+            setTimeout(() => {
+                formMessages.classList.add('success');
+                formMessages.textContent = 'Booking successful! We look forward to seeing you on the mat.';
+                document.getElementById('booking-form').reset(); // Clear form fields
+            }, 1000);
+        });
+    </script>
+</body>
+</html>
