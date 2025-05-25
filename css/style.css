@@ -1,0 +1,1283 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;700&display=swap');
+
+/* Custom Properties (Consolidated to max three core colors) */
+:root {
+    --main-dark: #1A1A1A; /* Primary dark for most backgrounds, sections, and elements */
+    --main-accent: #2ECC71; /* Green accent for highlights, buttons, links */
+    --main-light: #F0F0F0; /* Light text for readability and contrast */
+
+    /* Derived colors using RGBA or slight variations from the main three */
+    --main-dark-subtle: rgba(26, 26, 26, 0.85); /* Slightly transparent dark for certain elements */
+    --main-accent-darker: #28B463; /* Slightly darker green for hover states */
+    --main-accent-transparent: rgba(46, 204, 113, 0.1); /* Light transparent accent for hover effects */
+    --main-light-transparent-border: rgba(240, 240, 240, 0.1); /* Transparent light for subtle borders */
+    --main-light-subtle-text: #b0b0b0; /* Subtler light color for secondary text/authors */
+}
+
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Reset and base styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+    background-color: var(--main-dark);
+    color: var(--main-light);
+    line-height: 1.6;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    color: var(--main-light);
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+h1 { font-size: 2.8rem; }
+h2 { font-size: 2.2rem; }
+h3 { font-size: 1.8rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.125rem; }
+h6 { font-size: 1rem; }
+
+p, ul, li {
+    font-size: 0.5rem;
+    font-weight: 400;
+    color: var(--main-light);
+}
+
+a {
+    color: var(--main-accent);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--main-accent-darker);
+    text-decoration: underline;
+}
+ 
+
+/* Utility classes */
+.container {
+    max-width: 1200px;
+   
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+.container-bacg {
+   
+   
+    
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+.container-bacg h2{
+    text-align: center;
+
+}
+.container-bacg p{
+    text-align: center;
+}
+/* --- Banner Sections --- */
+.banner {
+    background-image: url('../images/premium\ photo.avif');
+    background-position: center;
+    background-size: 100%;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 90vh;
+    color: var(--main-light);
+    z-index: 2;
+    text-align: center;
+    position: relative;
+   
+}
+
+.banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    z-index: 1;
+}
+
+.banner  {
+    position: relative;
+    z-index: 2;
+}
+
+.banner h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--main-light);
+}
+
+.banner p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+   
+    margin-left: auto;
+    margin-right: auto;
+    color: var(--main-light); /* Using main-light for consistency */
+}
+
+
+.text-center {
+    text-align: center;
+}
+
+/* --- Header --- */
+header {
+    background-color: var(--main-dark);
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--main-light-transparent-border);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container
+ {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    height: 50px;
+    width: auto;
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 1.5rem;
+}
+
+nav ul li a {
+    color: var(--main-light);
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0.5rem 0;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--main-accent);
+    text-decoration: none;
+}
+
+nav ul li a.active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--main-accent);
+}
+
+/* Mobile Menu Toggle */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--main-light);
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+/* Dark Mode Toggle */
+.dark-mode-toggle {
+    background: none;
+    border: 1px solid var(--main-light-transparent-border);
+    color: var(--main-light);
+    font-size: 1.5rem;
+    padding: 0.5rem 0.8rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dark-mode-toggle:hover {
+    background-color: var(--main-accent);
+    color: var(--main-dark);
+}
+
+
+
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--main-accent);
+    color: var(--main-dark);
+    padding: 0.9rem 2.2rem;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 1.05rem;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.cta-button:hover {
+    background-color: var(--main-accent-darker);
+    transform: translateY(-3px);
+    text-decoration: none;
+}
+
+
+/* --- Main Content Layout --- */
+.content {
+    padding: 3rem 0;
+    background-color: var(--main-dark);
+}
+
+.container__main-sidebar {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 2rem;
+}
+
+.container__main {
+    padding: 1.5rem;
+    background-color: var(--main-dark-subtle); /* Use a slightly more subtle dark for main content area */
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.container__sidebar {
+    padding: 1.5rem;
+    background-color: var(--main-dark); /* Use main-dark for sidebar as it's a distinct section */
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.container__sidebar h3 {
+    color: var(--main-accent);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+/* Testimonial styles */
+.testimonial {
+    background-color: var(--main-dark-subtle); /* Use transparent dark for individual testimonials */
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    border: 1px solid var(--main-light-transparent-border);
+}
+
+.testimonial p {
+    font-style: italic;
+    font-size: 0.95rem;
+    color: var(--main-light);
+    margin-bottom: 0.5rem;
+}
+
+.testimonial .author {
+    font-weight: 600;
+    text-align: right;
+    color: var(--main-accent);
+    font-size: 0.9rem;
+}
+
+/* FAQ styles (reused in services and classes page) */
+.faq {
+    background: var(--main-dark);
+    padding: 1.5rem;
+    border: 1px solid var(--main-light-transparent-border);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    color: var(--main-light);
+    margin-bottom: 1.5rem;
+}
+
+.faq h3 {
+    color: var(--main-accent);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.faq-item {
+    margin-bottom: 1.2rem;
+}
+
+.faq-item h4 {
+    color: var(--main-light);
+    font-size: 1.15rem;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.faq-item h4:hover {
+    color: var(--main-accent);
+}
+
+.faq-item p {
+    font-size: 0.95rem;
+    color: var(--main-light-subtle-text);
+    line-height: 1.5;
+}
+
+
+/* --- Services Page Specific Styles --- */
+.service-card {
+    background: var(--main-dark-subtle); /* Adjusted to use derived dark color */
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--main-light-transparent-border);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 1.5rem;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.service-card h4 {
+    color: var(--main-accent);
+    margin-bottom: 0.8rem;
+}
+
+.service-card p {
+    color: var(--main-light);
+}
+
+/* Services grid if multiple services */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+
+/* --- Classes & Schedule Page Specific Styles --- */
+
+/* Table Styling for Classes & Schedule Page */
+.table-responsive {
+    overflow-x: auto;
+    margin-bottom: 2rem;
+}
+
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    color: var(--main-light);
+    background-color: rgba(0, 0, 0, 0.6);
+    border: 1px solid var(--main-light-transparent-border);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.schedule-table th,
+.schedule-table td {
+    padding: 1.2rem;
+    text-align: left;
+    border-bottom: 1px solid var(--main-light-transparent-border);
+}
+
+.schedule-table th {
+    background-color: var(--main-dark-subtle); /* Adjusted to use derived dark color */
+    color: var(--main-accent);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.schedule-table tbody tr {
+    transition: background-color 0.3s ease;
+}
+
+.schedule-table tbody tr:nth-child(even) {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.schedule-table tbody tr:hover {
+    background-color: var(--main-accent-transparent);
+}
+
+.schedule-table td {
+    font-size: 0.95rem;
+}
+
+/* Ensure book-class-button style within table cells is consistent */
+.schedule-table .book-class-button {
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    font-size: 0.85rem;
+    white-space: nowrap;
+    background: var(--main-accent);
+    color: var(--main-dark);
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: transform 0.3s ease, opacity 0.3s ease, background-color 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.schedule-table .book-class-button:hover {
+    transform: scale(1.03);
+    opacity: 0.95;
+    background-color: var(--main-accent-darker);
+    text-decoration: none;
+}
+
+
+/* Instructor Grid and Cards (still used in classes page) */
+.instructor-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem 0;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.instructor {
+    background: var(--main-dark-subtle); /* Adjusted to use derived dark color */
+    padding: 1.5rem;
+    border: 1px solid var(--main-light-transparent-border);
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 100, 0, 0.5); /* Shadow adjusted to be green-tinted but still dark */
+    color: var(--main-light);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.instructor:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 100, 0, 0.8); /* Shadow adjusted to be green-tinted but still dark */
+}
+
+.instructor img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 3px solid var(--main-accent);
+}
+
+.instructor h4 {
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+    color: var(--main-light);
+}
+
+.instructor .specialty {
+    font-style: italic;
+    color: var(--main-light-subtle-text);
+    margin-bottom: 1rem;
+}
+
+/* Schedule Request Form */
+#schedule-request-form {
+    background-color: var(--main-dark-subtle);
+    padding: 2rem;
+    border-radius: 8px;
+    margin-top: 2rem;
+}
+
+#schedule-request-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--main-light);
+    font-weight: 600;
+}
+
+#schedule-request-form input[type="email"] {
+    width: calc(100% - 22px);
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid var(--main-light-transparent-border);
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--main-light);
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+#schedule-request-form input[type="email"]::placeholder {
+    color: var(--main-light-subtle-text);
+}
+
+#schedule-request-form .cta-button {
+    width: auto;
+    margin-top: 0;
+}
+
+
+/* --- Gallery Page Specific Styles --- */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem 0;
+    margin-bottom: 2rem;
+}
+
+.gallery-item {
+    background: var(--main-dark-subtle); /* Adjusted to use derived dark color */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.gallery .caption {
+    padding: 1rem;
+    color: var(--main-light);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+
+/* --- Book a Class Page Specific Styles --- */
+.booking-form-section .container__main {
+    background-image: url('../images/book-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 2rem;
+}
+
+#booking-form label {
+    margin-top: 1rem;
+    display: block;
+    font-weight: 700;
+    color: var(--main-accent);
+    font-size: 1.05rem;
+}
+
+#booking-form input[type="text"],
+#booking-form input[type="email"],
+#booking-form input[type="tel"],
+#booking-form input[type="date"],
+#booking-form input[type="time"],
+#booking-form select,
+#booking-form textarea {
+    padding: 1rem;
+    border: 1px solid var(--main-light-transparent-border);
+    border-radius: 6px;
+    font-size: 0.95rem;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--main-light);
+    width: calc(100% - 22px);
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 1rem;
+}
+
+#booking-form input[type="text"]:focus,
+#booking-form input[type="email"]:focus,
+#booking-form input[type="tel"]:focus,
+#booking-form input[type="date"]:focus,
+#booking-form input[type="time"]:focus,
+#booking-form select:focus,
+#booking-form textarea:focus {
+    border-color: var(--main-accent);
+    box-shadow: 0 0 8px rgba(46, 204, 113, 0.5);
+    outline: none;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+/* Style for date and time input types to make them visible */
+#booking-form input[type="date"],
+#booking-form input[type="time"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    color: var(--main-light);
+}
+
+/* Placeholder color for all inputs */
+#booking-form input::placeholder,
+#booking-form textarea::placeholder {
+    color: var(--main-light-subtle-text);
+}
+
+#booking-form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.form-messages {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    border-radius: 8px;
+    font-weight: 600;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.form-messages.success {
+    background-color: var(--main-accent-transparent);
+    color: var(--main-accent);
+    border: 1px solid var(--main-accent);
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.form-messages.error {
+    background-color: rgba(231, 76, 60, 0.2); /* Error color remains distinct for visibility */
+    color: #E74C3C;
+    border: 1px solid #E74C3C;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* --- About Us Page Specific Styles --- */
+.about-us-content .container__main {
+   
+
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 2rem;
+}
+
+.about-us-content p {
+    margin-bottom: 1rem;
+}
+
+.about-us-content ul {
+    list-style: disc;
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.about-us-content ul li {
+    margin-bottom: 0.5rem;
+}
+
+
+/* --- Contact Us Page Specific Styles --- */
+.contact-form-section .container__main {
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 2rem;
+}
+
+.contact-info {
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+    color: var(--main-light);
+}
+
+.contact-info p {
+    margin-bottom: 0.8rem;
+    color: var(--main-light);
+}
+
+.contact-info p strong {
+    color: var(--main-accent);
+}
+
+#contact-form label {
+    margin-top: 1rem;
+    display: block;
+    font-weight: 700;
+    color: var(--main-accent);
+    font-size: 1.05rem;
+}
+
+#contact-form input[type="text"],
+#contact-form input[type="email"],
+#contact-form textarea {
+    padding: 1rem;
+    border: 1px solid var(--main-light-transparent-border);
+    border-radius: 6px;
+    font-size: 0.95rem;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--main-light);
+    width: calc(100% - 22px);
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 1rem;
+}
+
+#contact-form input[type="text"]:focus,
+#contact-form input[type="email"]:focus,
+#contact-form textarea:focus {
+    border-color: var(--main-accent);
+    box-shadow: 0 0 8px rgba(46, 204, 113, 0.5);
+    outline: none;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+#contact-form input::placeholder,
+#contact-form textarea::placeholder {
+    color: var(--main-light-subtle-text);
+}
+
+#contact-form textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.map-container {
+    margin-top: 2rem;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.map-container iframe {
+    display: block;
+}
+
+
+/* --- Feedback Page Specific Styles --- */
+.feedback-page .container__main {
+    background-image: url('../images/feedback-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+/* Form styling for feedback form (similar to book-a-class for consistency) */
+#feedback-form label {
+    margin-top: 1rem;
+    display: block;
+    font-weight: 700;
+    color: var(--main-accent);
+    font-size: 1.05rem;
+}
+
+#feedback-form input[type="text"],
+#feedback-form input[type="email"],
+#feedback-form select,
+#feedback-form textarea {
+    padding: 1rem;
+    border: 1px solid var(--main-light-transparent-border);
+    border-radius: 6px;
+    font-size: 0.95rem;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--main-light);
+    width: calc(100% - 22px);
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 1rem;
+}
+
+#feedback-form input[type="text"]:focus,
+#feedback-form input[type="email"]:focus,
+#feedback-form select:focus,
+#feedback-form textarea:focus {
+    border-color: var(--main-accent);
+    box-shadow: 0 0 8px rgba(46, 204, 113, 0.5);
+    outline: none;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+#feedback-form textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Star Rating System */
+.star-rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    margin-bottom: 1rem;
+}
+
+.star-rating input[type="radio"] {
+    display: none;
+}
+
+.star-rating label {
+    font-size: 2.5rem;
+    color: var(--main-light-subtle-text); /* Default star color */
+    cursor: pointer;
+    transition: color 0.2s ease;
+    padding: 0 0.1rem;
+    margin-top: 0;
+    display: inline-block;
+}
+
+.star-rating label:hover,
+.star-rating label:hover ~ label,
+.star-rating input[type="radio"]:checked ~ label {
+    color: #FFD700; /* Gold color for selected/hovered stars - This is a fourth distinct color for a special element. If you strictly need only 3, this would need to be replaced by a shade of green/light. */
+}
+
+/* Privacy Consent Checkbox */
+.privacy-consent {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+    color: var(--main-light);
+}
+
+.privacy-consent input[type="checkbox"] {
+    margin-right: 0.5rem;
+    flex-shrink: 0;
+    width: 18px;
+    height: 18px;
+    accent-color: var(--main-accent);
+}
+
+.privacy-consent label {
+    font-weight: 400;
+    color: var(--main-light);
+    font-size: 0.9rem;
+    margin-top: 0;
+}
+
+.privacy-consent label a {
+    color: var(--main-accent);
+    text-decoration: underline;
+}
+
+/* Form messages (reused from book-a-class.html, ensuring consistency) */
+.form-messages {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    border-radius: 8px;
+    font-weight: 600;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.form-messages.success {
+    background-color: var(--main-accent-transparent);
+    color: var(--main-accent);
+    border: 1px solid var(--main-accent);
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.form-messages.error {
+    background-color: rgba(231, 76, 60, 0.2);
+    color: #E74C3C; /* Keeping a distinct red for error messages for clear user feedback */
+    border: 1px solid #E74C3C;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Testimonial adjustments in sidebar for feedback page */
+.feedback-page .testimonial h3 {
+    color: var(--main-accent);
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+.feedback-page .testimonial p {
+    color: var(--main-light);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.feedback-page .testimonial .author {
+    font-style: italic;
+    text-align: right;
+    margin-top: 0.5rem;
+    color: var(--main-light-subtle-text);
+}
+
+
+/* --- Pricing and Membership Page Specific Styles --- */
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.pricing-card {
+    background: var(--main-dark-subtle); /* Adjusted to use derived dark color */
+    padding: 2rem;
+    border-radius: 10px;
+    border: 1px solid var(--main-light-transparent-border);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pricing-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8);
+}
+
+.pricing-card h3 {
+    color: var(--main-accent);
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.pricing-card .price {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--main-light);
+    margin-bottom: 1.5rem;
+}
+
+.pricing-card .price span {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--main-light); /* Using main-light */
+}
+
+.pricing-card ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 2rem;
+}
+
+.pricing-card ul li {
+    padding: 0.5rem 0;
+    border-bottom: 1px dotted var(--main-light-transparent-border);
+    color: var(--main-light);
+}
+
+.pricing-card ul li:last-child {
+    border-bottom: none;
+}
+
+
+/* --- Footer --- */
+footer {
+    background-color: var(--main-dark);
+    color: var(--main-light);
+    padding: 2rem 0;
+    text-align: center;
+    border-top: 1px solid var(--main-light-transparent-border);
+}
+
+footer p {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--main-light);
+}
+
+footer a {
+    color: var(--main-accent);
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.social-icons {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.social-icons img {
+    height: 30px;
+    width: 30px;
+    margin: 0 0.8rem;
+    transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+    transform: scale(1.15);
+}
+
+
+/* --- Responsive Design --- */
+@media (max-width: 992px) {
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 2rem; }
+    h3 { font-size: 1.6rem; }
+    h4 { font-size: 1.3rem; }
+    p, ul, li { font-size: 0.95rem; }
+
+    .banner {
+        padding: 5rem 1rem;
+        min-height: 60vh;
+    }
+
+    .banner h2 {
+        font-size: 2.5rem;
+    }
+
+    .banner p {
+        font-size: 1.1rem;
+    }
+
+    .container__main-sidebar {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .container__main,
+    .container__sidebar {
+        padding: 1.5rem;
+    }
+
+    /* Table adjustments */
+    .schedule-table th,
+    .schedule-table td {
+        padding: 1rem;
+    }
+
+    .schedule-table .book-class-button {
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 768px) {
+    header .container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .logo {
+        margin-bottom: 1rem;
+    }
+
+    nav {
+        order: 3;
+        flex-basis: 100%;
+        margin-top: 1rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    .menu-toggle {
+        display: block;
+        order: 2;
+        margin-left: auto;
+    }
+
+    .dark-mode-toggle {
+        order: 1;
+        margin-right: 1rem;
+    }
+
+    .banner {
+        padding: 4rem 1rem;
+        min-height: 80vh;
+    }
+
+    .banner h2 {
+        font-size: 1.75rem;
+    }
+
+    .banner p {
+        font-size: 0.875rem;
+    }
+
+    h1, h2 {
+        font-size: 1.75rem;
+    }
+
+    h3, h4 {
+        font-size: 1.3rem;
+    }
+
+    p, ul, li,
+    .banner p,
+    .pricing-card .price,
+    .testimonial p,
+    form label,
+    form input,
+    form select,
+    form textarea,
+    .cta-button,
+    .gallery .caption {
+        font-size: 0.875rem;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    /* Table adjustments for smaller screens */
+    .schedule-table th,
+    .schedule-table td {
+        padding: 0.8rem;
+        font-size: 0.85rem;
+    }
+    .schedule-table .book-class-button {
+        padding: 0.5rem 1rem;
+        font-size: 0.8rem;
+    }
+
+    /* Feedback form adjustments */
+    #feedback-form input[type="text"],
+    #feedback-form input[type="email"],
+    #feedback-form select,
+    #feedback-form textarea {
+        padding: 0.8rem;
+    }
+
+    .star-rating label {
+        font-size: 2rem;
+    }
+
+    .privacy-consent {
+        font-size: 0.85rem;
+    }
+
+    .privacy-consent label {
+        font-size: 0.85rem;
+    }
+
+    /* Booking form adjustments */
+    #booking-form input[type="text"],
+    #booking-form input[type="email"],
+    #booking-form input[type="tel"],
+    #booking-form input[type="date"],
+    #booking-form input[type="time"],
+    #booking-form select,
+    #booking-form textarea {
+        padding: 0.8rem;
+    }
+
+    /* Contact form adjustments */
+    #contact-form input[type="text"],
+    #contact-form input[type="email"],
+    #contact-form textarea {
+        padding: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 0.5rem;
+    }
+
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.8rem; }
+    h3 { font-size: 1.4rem; }
+    h4 { font-size: 1.2rem; }
+    p, ul, li { font-size: 0.875rem; }
+
+    .banner h2 {
+        font-size: 1.5rem;
+    }
+
+    .banner p {
+        font-size: 0.8rem;
+    }
+
+    .cta-button {
+        padding: 0.7rem 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    .logo {
+        height: 40px;
+    }
+
+    .social-icons img {
+        height: 25px;
+        width: 25px;
+        margin: 0 0.5rem;
+    }
+
+    /* Table adjustments for very small screens */
+    .schedule-table th,
+    .schedule-table td {
+        padding: 0.6rem;
+        font-size: 0.8rem;
+    }
+    .schedule-table .book-class-button {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.75rem;
+    }
+
+    /* Form input adjustments */
+    #feedback-form input[type="text"],
+    #feedback-form input[type="email"],
+    #feedback-form select,
+    #feedback-form textarea,
+    #booking-form input[type="text"],
+    #booking-form input[type="email"],
+    #booking-form input[type="tel"],
+    #booking-form input[type="date"],
+    #booking-form input[type="time"],
+    #booking-form select,
+    #booking-form textarea {
+        padding: 0.7rem;
+        font-size: 0.9rem;
+        width: calc(100% - 1.4rem);
+    }
+
+    .star-rating label {
+        font-size: 1.8rem;
+    }
+
+    .privacy-consent, .privacy-consent label {
+        font-size: 0.8rem;
+    }
+
+    .feedback-page .container__main {
+        padding: 1.5rem;
+    }
+}
